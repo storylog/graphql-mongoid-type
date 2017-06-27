@@ -2,7 +2,7 @@ import { GraphQLScalarType } from 'graphql';
 import mongoose from 'mongoose';
 
 export default new GraphQLScalarType({
-  name: 'MongoId',
+  name: 'MongoID',
   description: 'Mongo ID custom scalar type',
   parseValue(value) {
     try {
