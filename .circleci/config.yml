@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/graphql-mongoid-type
+    docker:
+      - image: circleci/node:8.1.2
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Test
+          command: yarn test
