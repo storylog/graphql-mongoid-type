@@ -1,0 +1,39 @@
+{
+  "name": "graphql-mongoid-type",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Natthakit Susanthitanon <ns@storylog.co>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d dist --plugins transform-es2015-modules-commonjs",
+    "lint": "eslint .",
+    "install": "yarn run build",
+    "pretest": "yarn run lint",
+    "test": "jest --coverage --forceExit --runInBand",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageReporters": [
+      "html"
+    ],
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "testMatch": [
+      "**/?(*.)(spec|test).js?(x)"
+    ]
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "graphql": "^0.10.3",
+    "mongoose": "^4.11.0"
+  },
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-storylog": "https://github.com/storylog/eslint-config-storylog.git",
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.4"
+  }
+}
