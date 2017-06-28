@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "install": "yarn run build",
     "pretest": "yarn run lint",
-    "test": "jest --coverage --forceExit --runInBand",
+    "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
   "jest": {
